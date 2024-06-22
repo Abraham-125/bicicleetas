@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css">
+    <title>Document</title>
+</head>
+<body>
+    <!--CREAR UNA PAGINA WEB CON 3 FUNCIONALIDADES, SOBRE MASTER BIKES-->
+    <!--NAVBAR-->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html">
+            <img src="../images/logo.png"  class="logo">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="../index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Bicicletas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Accesorios</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+
+                <div style="white-space: nowrap;">
+                    <button class="btn btn-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Carrito</button>
+
+                    <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal1">Iniciar sesión</button>
+                </div>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container-fluid bg-black d-flex align-items-center justify-content-center" style="height: 100px;">
+        <h1 class="titulo">BICICLETAS</h1>
+      </div>
+
+      
+      <!--CARD-->
+      <div class="container-fluid mt-4">
+        <div class="card mb-3" >
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="../images/avif.avif" class="img-fluid rounded-start card-img" alt="...">
+              </div>
+              <div class="col-md-8 d-flex align-items-center">
+                <div class="card-body">
+                  <p class="card-text ">Descubre nuestra amplia variedad de bicicletas de alta calidad, perfectas para cualquier terreno y estilo de vida. Desde bicicletas de montaña robustas hasta elegantes modelos urbanos, tenemos la bicicleta ideal para cada ciclista.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <!-- bicicletas -->
+      <div class="container-fluid" style="background-color: rgb(250, 55, 55);">
+        <div class="container">
+            <div class="row">
+                <div class="col-3 " style="margin-top: 30px !important;"></div>
+                <div class="col-6 " style="margin-top: 30px !important;">
+                    <input class="form-control btn-lg" type="text" id="searchInput" placeholder="¿Que bicicleta buscas?" aria-label="Search">
+                </div>
+                <div class="col-3" style="margin-top: 30px !important;">
+                    <button class="btn-primary me-4 btn-lg" id="searchButton" type="button" style="width: 100%;">Buscar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-2 mt-4 m" style=" background-color: rgb(163, 33, 33);">
+                    <h4 class="text-center mt-2" style="color: white; background-color: rgb(24, 146, 146);">Filtrar</h4>
+                    <form id="filtros-form">
+                        
+                      <h5 class="text-center" style="color: white; background-color:rgb(108, 34, 34)">Color</h5>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Rojo" id="colorRojo">
+                        <label class="form-check-label" for="colorRojo" style="color: white">Rojo</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Azul" id="colorAzul">
+                        <label class="form-check-label" for="colorAzul" style="color: white">Azul</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Negro" id="colorNegro">
+                        <label class="form-check-label" for="colorNegro" style="color: white">Negro</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Verde" id="colorVerde">
+                        <label class="form-check-label" for="colorVerde" style="color: white">Verde</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Blanco" id="colorBlanco">
+                        <label class="form-check-label" for="colorBlanco" style="color: white">Blanco</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Amarillo" id="colorAmarillo">
+                        <label class="form-check-label" for="colorAmarillo" style="color: white">Amarillo</label>
+                      </div>
+                  
+                      <h5 class="text-center" style="color: white; background-color: rgb(108, 34, 34)">Género</h5>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Hombre" id="generoHombre">
+                        <label class="form-check-label" for="generoHombre" style="color: white">Hombre</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Mujer" id="generoMujer">
+                        <label class="form-check-label" for="generoMujer" style="color: white">Mujer</label>
+                      </div>
+                      <h5 class="text-center " style="color: white; background-color:rgb(108, 34, 34)">Precio</h5>
+                      <div class="range-slider ">
+                            <input type="range" id="rangeMin" min="0" max="1000000" value="0" oninput="updateRange()">
+                            <input type="range" id="rangeMax" min="0" max="1000000" value="1000000" oninput="updateRange()">
+                        </div>
+                        <div class="range-values mt-4">
+                            <span class="titulo" id="minValue">0</span>
+                            <span class="titulo" id="maxValue">1000000</span>
+                        </div>
+                  
+                      <button class="btn btn-primary mt-3" type="button" onclick="limpiarFiltros()" style="width: 100%;">Limpiar filtros</button>
+                      <button class="btn btn-primary mt-2" type="button" onclick="filtrarBicicletas()" style="width: 100%;">Aplicar filtros</button>
+                    </form>
+                  </div>
+                  
+                  
+                <div class="col-10 mt-4">
+                    <div class="container mt-4">
+                        <div class="row" id="contenedor-tarjetas">
+                            <!-- Aquí se insertarán las tarjetas dinámicamente -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <!--MODAL-->
+      <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Inicia sesión</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Correo</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <button type="submit" class="btn btn-primary">Iniciar Sesion</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="mostrarModal"></div>
+
+        
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header" id="biciModelo">
+                </div>
+                <div class="modal-body" id="">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-6" id="imagenBici">
+                            </div>
+                            <div class="col-6">
+                                <div class="container-fluid otro-color">
+                                    <div class="row">
+                                        <div class="col-12" id="descripcionBici">
+                                        </div>
+                                        <div class="col-12" id="precioBici">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+
+
+
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary">Añadir al carrito</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- OFFCANVAS -->
+
+
+        <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Carrito</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <p>Try scrolling the rest of the page to see this option in action.</p>
+        </div>
+        <div class="offcanvas-footer">
+            <p>resumen de la compra</p>
+        </div>
+        </div>
+
+        <footer class="text-white d-flex align-items-end text-center" style="background-color: rgb(20, 79, 91); height:200px">
+            <div class="container">
+                <p>&copy; 2024 Masterbikes. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+      <script src="../javascript.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
